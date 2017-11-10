@@ -1,0 +1,15 @@
+<h1>Nova Questão</h1>
+
+<%= form_for :question, url: questions_path do |f| %>
+	<p>
+		<%= f.label :Matéria %><br>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :Questão %><br>
+		<%= f.text_field :body %>
+	</p>
+	<p>
+		<%= f.submit :Salvar %>
+	</p>
+<% end %>

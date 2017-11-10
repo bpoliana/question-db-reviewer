@@ -1,11 +1,9 @@
 # Revisor de Questões 
---
 
 ## Para começar
 
 Este projeto foi feito dentro dos limites possíveis a esta programadora neste contexto. Trata-se de um teste de Desenvolvimento Web em Ruby On Rails e seguir o padrão de projeto solicitado. 
 
---
 
 ### Requisitos do Projeto
 

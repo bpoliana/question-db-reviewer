@@ -1,0 +1,15 @@
+<h1 class="title">
+	<%= @question.title %>
+</h1>
+
+
+<p class="date">
+	Postada a <%= time_ago_in_words(@question.created_at) %> atrás
+</p>
+
+<p class="status">
+	<%= @question.status %>
+</p> 
+<p class="body">
+	<%= @question.body %>
+</p>

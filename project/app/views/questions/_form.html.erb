@@ -1,0 +1,37 @@
+<div id="page_wrapper">
+	<div class="container">
+		<h4>Nova Questão</h4>
+
+		<%= form_for :question, url: questions_path do |f| %>
+			<%if @question.errors.any? %>
+				<div id="errors">
+					<h5><%= pluralize(@question.errors.count, "error") %> impediu que essa questão seja salva.</h5>
+					<ul>
+						<% @question.errors.full_messafes.each do |msg| %>
+							<li><%= msg %></li> 
+						<% end -%>
+					</ul>
+				</div>
+			<% end -%>
+			<p>
+				<%= f.label :Fonte %><br>
+				<%= f.text_field :title %>
+			</p>
+			<p>
+				<%= f.label :Ano %><br>
+				<%= f.text_field :year %>
+			</p>
+			<p>
+				<%= f.label :Conteúdo %><br>
+				<%= f.text_field :body %>
+			</p>
+			<p>
+				<%= f.label :Alternativas %><br>
+				<%= f.text_field :alternatives %>
+			</p>
+			<div class="button">
+				<a class="waves-effect waves-light btn"><%= f.submit :Salvar %></a>
+			</div>
+		<% end %>
+	</div>
+</div>

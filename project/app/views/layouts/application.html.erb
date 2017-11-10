@@ -2,13 +2,34 @@
 <html>
   <head>
     <title>Revisor de Questões</title>
-    <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= yield %>
+  	<div class="container">
+	  	<nav>
+		    <div class="nav-wrapper nav-mine" style="padding: 0 5px;">
+		      <a href="#" class="brand-logo">RevQuest</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="/questions/index">Questões</a></li>
+		        <li><a href="/questions/new">Nova Questão</a></li>
+		      	<li class="sign_in">Login</li>
+		      </ul>
+		    </div>
+		</nav>
+	</div>
+
+	<div id="main_content">
+
+		<% flash.each do |name,msg| %>
+			<%= content_tag(:div, msg, class: "alert") %>
+		<% end %>
+
+    	<%= yield %>
+    </div>	
   </body>
 </html>

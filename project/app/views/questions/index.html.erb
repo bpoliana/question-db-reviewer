@@ -1,20 +1,26 @@
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">Logo</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
-</nav>
-
-<% @questions.each do |question| %>
-
-	<div class="question_wrapper">
-		<h2 class="title"><%= link_to question.title, question %></h2>
-		<p class="date"><%= question.created_at.strftime("%d, %B, %Y") %></p>
-		<p class="status"><%= question.status %></p>
+<div class="container">
+	<div class="question_wrapper s12 m4 l8">
+		<br>
+		<table>
+			<thead>
+				<tr>
+					<th>Matéria</th>
+					<th>Questão</th>
+					<th>Status</th>
+				</tr>
+			</thead>	
+			<tbody>
+				<% @questions.each do |question| %>
+				<tr>
+					<td><%= question.title %></td>
+					<td><%= question.id %></td>
+					<td><%= question.body %></td>
+					<td><%= question.status %></td>
+				</tr>
+				<% end -%>
+			</tbody>
+		</table>
 		
 	</div>
-<% end -%>
+
+</div>
